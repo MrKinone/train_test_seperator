@@ -73,6 +73,6 @@ def folder_check(DIR):
 
 
 if __name__ == '__main__':
-    IMG_DIR = r"C:\Users\oktay\Desktop\Martur\Clips_Control\v3\images\train"
-    TRAIN_TEST_DIR = r"C:\Users\oktay\Desktop"
+    IMG_DIR = r""
+    TRAIN_TEST_DIR = r""
     train_test_seperator(img_dir=IMG_DIR, train_test_dir=TRAIN_TEST_DIR, ratio=0.8)
