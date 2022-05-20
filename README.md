@@ -2,6 +2,7 @@
 
 What does this script do
 - this script separates your images as train and test
+- Also if this images have a TXT or XML label files, seperates this files too
 - If the train and test folder does not exist, it creates these folders
 - You can adjust the train test ratio if you want. Default 0.8
 - Maybe must be change image extension. Default jpg
