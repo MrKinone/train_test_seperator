@@ -10,7 +10,7 @@ def train_test_seperator(img_dir, train_test_dir, ratio=0.8):
     :param train_test_dir: Enter the path of the train and test folder
             if the folder is not created it will be created automatically
     :param ratio: train/test ratio it must be between [0,1]
-            if write 1 it copy all files in train folder
+            if write 1 it's copy all files in train folder
     :return: none
     """
 
