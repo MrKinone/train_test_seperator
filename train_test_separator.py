@@ -16,7 +16,7 @@ def train_test_seperator(img_dir, train_test_dir, ratio=0.8):
 
     img_list = []
 
-    for filename in glob.glob(img_dir + '/*.jpeg'):
+    for filename in glob.glob(img_dir + '/*.jpg'):
         img_list.append(filename)
 
     train_dir = train_test_dir + "\\train"
