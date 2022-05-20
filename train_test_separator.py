@@ -33,8 +33,8 @@ def train_test_seperator(img_dir, train_test_dir, ratio=0.8):
 
         shutil.copy(img_list[file_number], train_dir)
 
-        xml_file = img_list[file_number][:-5] + ".xml"
-        txt_file = img_list[file_number][:-5] + ".txt"
+        xml_file = img_list[file_number][:-4] + ".xml"
+        txt_file = img_list[file_number][:-4] + ".txt"
 
         if os.path.isfile(xml_file):
             shutil.copy(xml_file, train_dir)
@@ -49,8 +49,8 @@ def train_test_seperator(img_dir, train_test_dir, ratio=0.8):
 
         shutil.copy(img_list[file_number], test_dir)
 
-        xml_file = img_list[file_number][:-5] + ".xml"
-        txt_file = img_list[file_number][:-5] + ".txt"
+        xml_file = img_list[file_number][:-4] + ".xml"
+        txt_file = img_list[file_number][:-4] + ".txt"
         if os.path.isfile(xml_file):
             shutil.copy(xml_file, test_dir)
         elif os.path.isfile(txt_file):
@@ -73,6 +73,6 @@ def folder_check(DIR):
 
 
 if __name__ == '__main__':
-    IMG_DIR = r"write image folder directory"
-    TRAIN_TEST_DIR = r"write train test folder directory"
+    IMG_DIR = r"C:\Users\oktay\Desktop\Martur\Clips_Control\v3\images\train"
+    TRAIN_TEST_DIR = r"C:\Users\oktay\Desktop"
     train_test_seperator(img_dir=IMG_DIR, train_test_dir=TRAIN_TEST_DIR, ratio=0.8)
