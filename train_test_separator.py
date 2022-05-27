@@ -77,7 +77,7 @@ if __name__ == '__main__':
     arg_parse.add_argument('-i', '--image_directory', type=str,  required=True, help="Enter the path to the folder where the images are located")
     arg_parse.add_argument('-t', '--train_test_directory', type=str, required=True,
                            help="Enter the path of the train and test folder if the folder is not created it will be created automatically")
-    arg_parse.add_argument('-r', '--ratio', type=float, required=False,
+    arg_parse.add_argument('-r', '--ratio', type=float, required=True,
                         help="train/test ratio it must be between [0,1]. Default=0.8")
     args = arg_parse.parse_args()
     train_test_seperator(img_dir=args.image_directory, train_test_dir=args.train_test_directory, ratio=args.ratio)
