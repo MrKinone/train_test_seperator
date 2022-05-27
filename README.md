@@ -6,4 +6,10 @@ What does this script do
 - You can adjust the train test ratio if you want. Default 0.8
 - Maybe must be change image extension. Default jpg
 
+V1.1 Add argparse
+
+example
+
+python train_test_separator.py --i C:\Images\All_Images --t C:\Images --r 0.5
+
 _Author: Oktay Kaan Memiş_
