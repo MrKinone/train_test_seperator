@@ -2,7 +2,7 @@ import random
 import glob
 import shutil
 import os
-
+import argparse
 
 def train_test_seperator(img_dir, train_test_dir, ratio=0.8):
     """
@@ -73,6 +73,11 @@ def folder_check(DIR):
 
 
 if __name__ == '__main__':
-    IMG_DIR = r"C:\Users\oktay\Desktop\Martur\Clips_Control\v3\images\train"
-    TRAIN_TEST_DIR = r"C:\Users\oktay\Desktop"
-    train_test_seperator(img_dir=IMG_DIR, train_test_dir=TRAIN_TEST_DIR, ratio=0.8)
+    arg_parse = argparse.ArgumentParser(description='this script separates your images as train and test')
+    arg_parse.add_argument('-i', '--image_directory', type=str,  required=True, help="Enter the path to the folder where the images are located")
+    arg_parse.add_argument('-t', '--train_test_directory', type=str, required=True,
+                           help="Enter the path of the train and test folder if the folder is not created it will be created automatically")
+    arg_parse.add_argument('-r', '--ratio', type=float, required=False,
+                        help="train/test ratio it must be between [0,1]. Default=0.8")
+    args = arg_parse.parse_args()
+    train_test_seperator(img_dir=args.image_directory, train_test_dir=args.train_test_directory, ratio=args.ratio)
