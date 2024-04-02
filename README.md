@@ -9,7 +9,7 @@ What does this script do
 V1.1 Add argparse
 
 example
-
+```bash
 python train_test_separator.py --i C:\Images\All_Images --t C:\Images --r 0.5
-
+```
 _Author: Oktay Kaan Memiş_
